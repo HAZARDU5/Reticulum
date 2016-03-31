@@ -399,7 +399,7 @@ var Reticulum = (function () {
         reticle.setDepthAndScale();
 
         if ( threeObject.onGazeOut != null ) {
-            threeObject.onGazeOut();
+            threeObject.onGazeOut(threeObject);
         }
     };
 
@@ -420,7 +420,7 @@ var Reticulum = (function () {
         vibrate( reticle.vibrateHover );
         //Does object have an action assigned to it?
         if (threeObject.onGazeOver != null) {
-            threeObject.onGazeOver();
+            threeObject.onGazeOver(threeObject);
         }
     };
 
@@ -451,7 +451,7 @@ var Reticulum = (function () {
             vibrate( fuse.vibratePattern );
             //Does object have an action assigned to it?
             if (threeObject.onGazeLong != null) {
-                threeObject.onGazeLong();
+                threeObject.onGazeLong(threeObject);
             }
             //Reset the clock
             threeObject.userData.hitTime = elapsed;
@@ -472,7 +472,7 @@ var Reticulum = (function () {
 
         //Does object have an action assigned to it?
         if (threeObject.onGazeClick != null) {
-            threeObject.onGazeClick();
+            threeObject.onGazeClick(threeObject);
         }
     };
 
